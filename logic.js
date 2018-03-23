@@ -31,9 +31,10 @@ const addQuote = (quote) => {
   Quote.create(quote, (err) => {
     assert.equal(null, err);
     console.info('New quote added');
-    db.disconnect();
+    mongoose.disconnect();
   });
 };
+
 
 // returns quote as JSON
 const getQuote = (searchTerm) => {
@@ -50,12 +51,12 @@ const getQuote = (searchTerm) => {
       assert.equal(null, err);
       console.info(quote);
       console.info(`${quote.length} matches`);
-      db.disconnect();
+      mongoose.disconnect();
     });
 };
 
 // Export all methods
 module.exports = {
-  addContact,
-  getContact
+  addQuote,
+  getQuote
 };

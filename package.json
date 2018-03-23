@@ -1,7 +1,7 @@
 {
   "name": "quotes-manager",
   "version": "1.0.0",
-  "description": "A commandline quote management system",
+  "description": "A command line quote management system",
   "dependencies": {
     "commander": "^2.15.1",
     "inquirer": "^5.1.0",
